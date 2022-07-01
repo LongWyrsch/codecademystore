@@ -8,14 +8,18 @@ import {store} from './app/store.js'
 
 // Pass state and dispatch props to the <App /> component.
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const rootRender = () => root.render(
   <React.StrictMode>
-    <App state={store.getState()} dispatch={store.dispatch}/>
+  <App state={store.getState()} dispatch={store.dispatch}/>
   </React.StrictMode>
-);
+)
+
+rootRender()
 
 
 
+
+store.subscribe(rootRender)
 
 
 
