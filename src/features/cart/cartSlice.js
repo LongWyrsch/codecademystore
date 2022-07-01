@@ -43,7 +43,10 @@ export const addItem = (itemToAdd) => {
           ...itemToUpdate,
           quantity: newQuantity
         }
-        return {};
+        return {
+          ...cart,
+          [name]: updatedItem
+        };
       }
       default: {
         return cart;
