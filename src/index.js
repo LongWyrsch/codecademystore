@@ -10,7 +10,7 @@ import {store} from './app/store.js'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App state={store.getState()} dispatch={store.dispatch}/>
   </React.StrictMode>
 );
 
