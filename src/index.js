@@ -4,6 +4,7 @@ import './index.css';
 import App from './app/App.js';
 import reportWebVitals from './reportWebVitals';
 // Import the store here.
+import {store} from './app/store.js'
 
 // Pass state and dispatch props to the <App /> component.
 const root = ReactDOM.createRoot(document.getElementById('root'));
