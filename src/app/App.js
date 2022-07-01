@@ -24,6 +24,12 @@ function App (props) {
         dispatch={dispatch}
       />
 
+      <Cart
+        cart={state.cart}
+        currencyFilter={state.currencyFilter}
+        dispatch={dispatch}
+      />
+
     </div>
   );
 };
