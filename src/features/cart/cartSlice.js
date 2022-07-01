@@ -9,7 +9,10 @@ export const addItem = (itemToAdd) => {
   export const changeItemQuantity = (name, newQuantity) => {
     return {
       type: 'cart/changeItemQuantity',
-      payload: {name: name, newQuantity: newQuantity},
+      payload: {
+        name: name, 
+        newQuantity: newQuantity
+      },
     };
   };
   
@@ -34,8 +37,12 @@ export const addItem = (itemToAdd) => {
         const itemToUpdate = cart[name];
   
         // Create a copy of itemToUpdate and update the quantity prop.
-  
+        const updatedItem = {}
         // Return a copy of the cart with the updatedItem included.
+        updatedItem = {
+          ...itemToUpdate,
+          quantity: newQuantity
+        }
         return {};
       }
       default: {
