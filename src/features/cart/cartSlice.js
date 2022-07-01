@@ -37,12 +37,11 @@ export const addItem = (itemToAdd) => {
         const itemToUpdate = cart[name];
   
         // Create a copy of itemToUpdate and update the quantity prop.
-        const updatedItem = {}
-        // Return a copy of the cart with the updatedItem included.
-        updatedItem = {
+        const updatedItem = {
           ...itemToUpdate,
           quantity: newQuantity
         }
+        // Return a copy of the cart with the updatedItem included.
         return {
           ...cart,
           [name]: updatedItem
