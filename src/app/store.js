@@ -7,3 +7,8 @@ import {inventoryReducer} from '../features/inventory/inventorySlice'
 
 
 // Create and export the store here.
+export const store = createStore(combineReducers({
+    cart: cartReducer,
+    currencyFilter: currencyFilterReducer,
+    inventory: inventoryReducer
+}))
