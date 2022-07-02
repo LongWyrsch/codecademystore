@@ -28,7 +28,8 @@ export const Cart = (props) => {
   for (const [key, value] of Object.entries(cart)) {
      cartElements.push(createCartItem(key))
   }
-  const total = 0;
+  const total = calculateTotal(cart, currencyFilter);
+  // total = calculateTotal(cart, currencyFilter)
 
   return (
     <div id="cart-container">
